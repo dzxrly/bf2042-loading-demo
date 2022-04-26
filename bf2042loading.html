@@ -1,0 +1,318 @@
+<html>
+<head>
+  <style>
+      html, body {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #000;
+      }
+
+      .bf2042-loading {
+          --width: 240px;
+          --blk-color: #18e5e1;
+          --animation-duration: 15s;
+          --sqrt2divide2: 0.70710678;
+          --times: infinite;
+          --min-opacity: .4;
+
+          width: var(--width);
+          height: var(--width);
+          position: relative;
+          margin: 20px;
+          animation: loading-rotate var(--animation-duration) ease-in-out var(--times) forwards;
+      }
+
+      .bf2042-loading .loading-blk {
+          width: calc(var(--width) / 3);
+          height: calc(var(--width) / 3);
+          background: var(--blk-color);
+          position: absolute;
+      }
+
+      .bf2042-loading .blk-1 {
+          left: calc(var(--width) / 3);
+          top: 0;
+          animation: blk-1-animation var(--animation-duration) ease-in-out var(--times);
+      }
+
+      .bf2042-loading .blk-2 {
+          left: calc(var(--width) / 3 * 2);
+          top: calc(var(--width) / 3);
+          animation: blk-2-animation var(--animation-duration) ease-in-out .1s var(--times);
+      }
+
+      .bf2042-loading .blk-3 {
+          left: calc(var(--width) / 3);
+          top: calc(var(--width) / 3 * 2);
+          animation: blk-3-animation var(--animation-duration) ease-in-out .2s var(--times);
+      }
+
+      .bf2042-loading .blk-4 {
+          left: 0;
+          top: calc(var(--width) / 3);
+          animation: blk-4-animation var(--animation-duration) ease-in-out .3s var(--times);
+      }
+
+      @keyframes loading-rotate {
+          30% {
+              transform: rotate(0);
+          }
+          40% {
+              transform: rotate(1845deg);
+          }
+          80% {
+              transform: rotate(1845deg);
+          }
+          90% {
+              transform: rotate(2160deg);
+          }
+          100% {
+              transform: rotate(2160deg);
+          }
+      }
+
+      @keyframes blk-1-animation {
+          0% {
+              opacity: 1;
+          }
+          5% {
+              opacity: var(--min-opacity);
+          }
+          10% {
+              opacity: 1;
+          }
+          15% {
+              opacity: var(--min-opacity);
+          }
+          20% {
+              opacity: 1;
+          }
+          40% {
+              opacity: 1;
+          }
+          45% {
+              opacity: var(--min-opacity);
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(0deg);
+          }
+          60% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(0) translateY(0);
+          }
+          70% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          75% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          80% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          85% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          90% {
+              transform: rotate(0) translateX(0) translateY(0);
+              opacity: 1;
+          }
+          95% {
+              opacity: var(--min-opacity);
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+
+      @keyframes blk-2-animation {
+          0% {
+              opacity: 1;
+          }
+          5% {
+              opacity: var(--min-opacity);
+          }
+          10% {
+              opacity: 1;
+          }
+          15% {
+              opacity: var(--min-opacity);
+          }
+          20% {
+              opacity: 1;
+          }
+          40% {
+              opacity: 1;
+          }
+          45% {
+              opacity: var(--min-opacity);
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(0deg);
+          }
+          60% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(0) translateY(0);
+          }
+          70% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          75% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          80% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          85% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2));
+          }
+          90% {
+              transform: rotate(0) translateX(0) translateY(0);
+              opacity: 1;
+          }
+          95% {
+              opacity: var(--min-opacity);
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+
+      @keyframes blk-3-animation {
+          0% {
+              opacity: 1;
+          }
+          5% {
+              opacity: var(--min-opacity);
+          }
+          10% {
+              opacity: 1;
+          }
+          15% {
+              opacity: var(--min-opacity);
+          }
+          20% {
+              opacity: 1;
+          }
+          40% {
+              opacity: 1;
+          }
+          45% {
+              opacity: var(--min-opacity);
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(0deg);
+          }
+          60% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(0) translateY(0);
+          }
+          70% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          75% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          80% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          85% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          90% {
+              transform: rotate(0) translateX(0) translateY(0);
+              opacity: 1;
+          }
+          95% {
+              opacity: var(--min-opacity);
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+
+      @keyframes blk-4-animation {
+          0% {
+              opacity: 1;
+          }
+          5% {
+              opacity: var(--min-opacity);
+          }
+          10% {
+              opacity: 1;
+          }
+          15% {
+              opacity: var(--min-opacity);
+          }
+          20% {
+              opacity: 1;
+          }
+          40% {
+              opacity: 1;
+          }
+          45% {
+              opacity: var(--min-opacity);
+          }
+          50% {
+              opacity: 1;
+              transform: rotate(0deg);
+          }
+          60% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(0) translateY(0);
+          }
+          70% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          75% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          80% {
+              opacity: 1;
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          85% {
+              opacity: var(--min-opacity);
+              transform: rotate(45deg) translateX(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / 2)) translateY(calc(var(--sqrt2divide2) * calc(var(--width) / 3 / 2) / -2));
+          }
+          90% {
+              transform: rotate(0) translateX(0) translateY(0);
+              opacity: 1;
+          }
+          95% {
+              opacity: var(--min-opacity);
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="bf2042-loading">
+  <div class="loading-blk blk-1"></div>
+  <div class="loading-blk blk-2"></div>
+  <div class="loading-blk blk-3"></div>
+  <div class="loading-blk blk-4"></div>
+</div>
+</body>
+</html>
